@@ -1,0 +1,9 @@
+/* CSS untuk marquee */
+.marquee {
+    background-color: transparent ; /* Warna latar belakang marquee */
+    color:#333;  /* Warna teks */
+    font-size:18px;  /* Ukuran font */
+    padding:10px;  /* Padding */
+    text-align:center;  /* Pusatkan teks */
+    font-weight:bold;  /* Teks tebal */
+  }

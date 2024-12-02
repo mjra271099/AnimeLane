@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://nontonstreamingfilm.my.id/sitemap.xml
+Sitemap: https://nontonstreamingfilm.my.id/sitemap-posts.xml
+Sitemap: https://nontonstreamingfilm.my.id/sitemap-images.xml
+Sitemap: https://nontonstreamingfilm.my.id/sitemap-index.xml

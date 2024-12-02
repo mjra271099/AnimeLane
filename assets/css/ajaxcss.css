@@ -1,0 +1,180 @@
+  /* Container pencarian */
+  .search-container1{
+    max-width: 500px;
+    width: 90%;
+    display: block;
+    position:absolute;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+  }
+  .search-container {
+      display: flex; /* Membuat input dan tombol sejajar */
+      align-items: center;
+      gap: 8px; /* Jarak antara input dan tombol */
+      margin: 10px 0; /* Ruang vertikal dengan elemen lain */
+    }
+    
+    /* Style input pencarian */
+    #search-input {
+      flex: 1; /* Input akan menyesuaikan lebar yang tersedia */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow ringan di dalam */
+      transition: border-color 0.3s ease; /* Animasi halus untuk perubahan border */
+    }
+    
+    /* Fokus pada input */
+    #search-input:focus {
+      border-color: #007bff; /* Border menjadi biru saat fokus */
+      outline: none; /* Hilangkan outline default */
+    }
+    
+    /* Style tombol pencarian */
+    .search-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex; /* Agar ikon di tengah */
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease; /* Animasi halus untuk hover */
+    }
+    
+    /* Hover pada tombol */
+    .search-btn:hover {
+      background-color: #0056b3; /* Warna lebih gelap saat hover */
+    }
+    
+    /* Ikon pencarian */
+    .search-btn ion-icon {
+      font-size: 20px;
+      pointer-events: none; /* Mencegah ikon menjadi fokus */
+    }
+    
+    /* Hasil pencarian */
+  
+  #search-results {
+      position: absolute; /* Membuat posisi hasil pencarian absolut */
+      top: 100%; /* Muncul tepat di bawah input pencarian */
+      left: 0;
+      width: 100%; /* Lebar mengikuti input pencarian */
+      max-height: 200px; /* Maksimal tinggi untuk scroll */
+      overflow-y: auto; /* Scroll jika konten terlalu panjang */
+      background-color: #ffffff; /* Latar belakang putih */
+      /* border: 1px solid #ccc; Border untuk memisahkan dari input */
+      border-radius: 4px; /* Radius sudut */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk estetika */
+      z-index: 999; /* Pastikan di atas elemen lainnya */
+    }
+    
+    /* Item hasil pencarian */
+    .search-result-item {
+      padding: 10px;
+      background-color: #f4f4f4;
+      margin: 0; /* Hilangkan margin antar item */
+      border-bottom: 1px solid #ddd; /* Garis pemisah antar item */
+    }
+    
+    .search-result-item:last-child {
+      border-bottom: none; /* Hilangkan garis bawah pada item terakhir */
+    }
+    
+    .search-result-item a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .search-result-item a:hover {
+      color: #007bff;
+    }
+    
+    /* Scrollbar yang lebih rapi (opsional) */
+    #search-results::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    #search-results::-webkit-scrollbar-thumb {
+      background-color: #007bff;
+      border-radius: 4px;
+    }
+    
+    #search-results::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    /* SEARCH 2 */
+    /* Wrapper untuk pencarian */
+  .search-wrapper {
+      margin-bottom: 20px; /* Memberikan ruang di sekitar */
+      margin-top: -100px; /* Memberikan ruang di sekitar */
+    }
+    
+    /* Kontainer bar pencarian */
+    .search-bar {
+      display: flex; /* Membuat input dan tombol sejajar */
+      align-items: center;
+      gap: 8px; /* Jarak antara input dan tombol */
+
+    }
+    
+    /* Style input pencarian */
+    #anime-search {
+      flex: 1; /* Input akan menyesuaikan lebar yang tersedia */
+    padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow ringan di dalam */
+      transition: border-color 0.3s ease; /* Animasi halus untuk perubahan border */
+    }
+    
+    /* Fokus pada input */
+    #anime-search:focus {
+      border-color: #007bff; /* Border menjadi biru saat fokus */
+      outline: none; /* Hilangkan outline default */
+    }
+    
+    /* Style tombol pencarian */
+    .search-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex; /* Agar ikon di tengah */
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease; /* Animasi halus untuk hover */
+    }
+    
+    /* Hover pada tombol */
+    .search-button:hover {
+      background-color: #0056b3; /* Warna lebih gelap saat hover */
+    }
+    
+    /* Ikon pencarian */
+    .search-button ion-icon {
+      font-size: 20px;
+      pointer-events: none; /* Mencegah ikon menjadi fokus */
+    }
+    @media (min-width: 768px) {
+      .search-wrapper {
+        display: none; /* Menyembunyikan elemen pencarian */
+      }
+      #search-results1{
+        display: none;
+      
+      }
+    }
+    

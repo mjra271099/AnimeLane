@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/nontonst/public_html/assets/otakudesu-api"
+PassengerBaseURI "/assets/otakudesu-api"
+PassengerNodejs "/home/nontonst/nodevenv/public_html/assets/otakudesu-api/19/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

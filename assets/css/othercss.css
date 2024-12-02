@@ -1,0 +1,123 @@
+.loadmore-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Styling untuk tombol Load More */
+#load-more {
+    background-color: var(--citrine); /* Warna latar belakang biru */
+    color: white;  /* Warna teks putih */
+    border: none;  /* Menghapus border */
+    padding: 10px 20px;  /* Memberikan padding untuk membuat tombol lebih besar */
+    font-size: 16px;  /* Ukuran font */
+    cursor: pointer;  /* Menunjukkan bahwa tombol dapat diklik */
+    border-radius: 5px;  /* Membuat sudut tombol lebih bulat */
+    display: block;  /* Menjadikan tombol blok agar menempati satu baris */
+    width: 200px;  /* Lebar tombol */
+    margin: 50px auto;  /* Menempatkan tombol di tengah halaman */
+    text-align: center;  /* Menjaga teks di tengah tombol */
+    transition: background-color 0.3s;  /* Transisi saat mengubah warna latar belakang */
+
+  }
+  
+  /* Efek hover ketika mouse berada di atas tombol */
+  #load-more:hover {
+    background-color: #0056b3;  /* Mengubah warna latar belakang ketika tombol dihover */
+  }
+  
+  /* Efek ketika tombol dalam keadaan disabled */
+  #load-more[disabled] {
+    background-color: #c0c0c0;  /* Memberikan warna abu-abu pada tombol yang dinonaktifkan */
+    cursor: not-allowed;  /* Menampilkan cursor yang menandakan bahwa tombol tidak dapat diklik */
+  }
+  
+  /* ----------------- */
+
+/* Styling untuk tombol Load More */
+#ongoing-load-more-btn {
+    background-color: var(--citrine); /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border */
+    padding: 10px 20px; /* Padding tombol */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Pointer untuk klik */
+    border-radius: 5px; /* Sudut tombol bulat */
+    display: block; /* Mengatur sebagai blok */
+    width: 200px; /* Lebar tombol */
+    margin: 20px auto; /* Margin atas 20px, tengah otomatis */
+    text-align: center; /* Pusatkan teks */
+    transition: background-color 0.3s; /* Efek transisi untuk hover */
+}
+
+/* Efek hover */
+#ongoing-load-more-btn:hover {
+    background-color: #0056b3; /* Warna hover */
+}
+
+/* Efek jika tombol disabled */
+#ongoing-load-more-btn[disabled] {
+    background-color: #c0c0c0; /* Warna tombol nonaktif */
+    cursor: not-allowed; /* Cursor untuk tombol nonaktif */
+}
+
+
+
+  /* ----------------- */
+
+#load-more1 {
+    background-color: var(--citrine); /* Warna latar belakang biru */
+    color: white;  /* Warna teks putih */
+    border: none;  /* Menghapus border */
+    padding: 10px 20px;  /* Memberikan padding untuk membuat tombol lebih besar */
+    font-size: 16px;  /* Ukuran font */
+    cursor: pointer;  /* Menunjukkan bahwa tombol dapat diklik */
+    border-radius: 5px;  /* Membuat sudut tombol lebih bulat */
+    display: block;  /* Menjadikan tombol blok agar menempati satu baris */
+    width: 200px;  /* Lebar tombol */
+    margin: 50px auto;  /* Menempatkan tombol di tengah halaman */
+    text-align: center;  /* Menjaga teks di tengah tombol */
+    transition: background-color 0.3s;  /* Transisi saat mengubah warna latar belakang */
+
+  }
+  
+  /* Efek hover ketika mouse berada di atas tombol */
+  #load-more1:hover {
+    background-color: #0056b3;  /* Mengubah warna latar belakang ketika tombol dihover */
+  }
+  
+  /* Efek ketika tombol dalam keadaan disabled */
+  #load-more1[disabled] {
+    background-color: #c0c0c0;  /* Memberikan warna abu-abu pada tombol yang dinonaktifkan */
+    cursor: not-allowed;  /* Menampilkan cursor yang menandakan bahwa tombol tidak dapat diklik */
+  }
+
+
+
+  /* Styling untuk tombol More Genre */
+#more-genre {
+  background-color: var(--citrine); /* Warna latar belakang */
+  color: black;  /* Warna teks putih */
+  border: none;  /* Menghapus border */
+  padding: 10px 10px;  /* Memberikan padding untuk membuat tombol lebih besar */
+  font-size: 16px;  /* Ukuran font */
+  cursor: pointer;  /* Menunjukkan bahwa tombol dapat diklik */
+  border-radius: 5px;  /* Membuat sudut tombol lebih bulat */
+  display: block;  /* Menjadikan tombol blok agar menempati satu baris */
+  width: 150px;  /* Lebar tombol */
+  text-align: center;  /* Menjaga teks di tengah tombol */
+  transition: background-color 0.3s;  /* Transisi saat mengubah warna latar belakang */
+  margin-top: 60px; /* Memberikan sedikit ruang atas */
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+/* Efek hover ketika mouse berada di atas tombol */
+#more-genre:hover {
+  background-color: #0056b3;  /* Mengubah warna latar belakang ketika tombol dihover */
+}
+
+/* Efek ketika tombol dalam keadaan disabled */
+#more-genre[disabled] {
+  background-color: #c0c0c0;  /* Memberikan warna abu-abu pada tombol yang dinonaktifkan */
+  cursor: not-allowed;  /* Menampilkan cursor yang menandakan bahwa tombol tidak dapat diklik */
+}

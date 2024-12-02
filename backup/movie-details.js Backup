@@ -1,0 +1,108 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Ambil parameter query id dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('id');
+  
+    if (!movieId) {
+      console.error("No movie ID found!");
+      return;
+    }
+  
+    // Ambil data JSON
+    fetch("dataanime.json")  // Pastikan path file JSON benar
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Temukan data film berdasarkan anime_id
+        const movie = data.find((item) => item.anime_id === movieId);
+  
+        if (!movie) {
+          console.error("Movie not found!");
+          return;
+        }
+  
+        // Isi konten detail film
+        document.querySelector(".movie-detail-banner img").src = movie.thumb;
+        document.querySelector(".movie-detail-banner img").alt = `${movie.title} movie poster`;
+        document.querySelector(".detail-title").innerHTML = movie.title;
+        document.querySelector(".storyline").textContent = movie.synopsis;
+        document.querySelector(".download-btn a").href = movie.batch_link.link;
+  
+        // Update meta information
+        const metaWrapper = document.querySelector(".meta-wrapper .date-time");
+        metaWrapper.innerHTML = `
+          <div>
+            <ion-icon name="calendar-outline"></ion-icon>
+            <time datetime="${movie.release_date}">${movie.release_date}</time>
+          </div>
+          <div>
+            <ion-icon name="time-outline"></ion-icon>
+            <time datetime="PT${movie.duration}">${movie.duration}</time>
+          </div>
+        `;
+  
+        // Genre wrapper
+        const genreWrapper = document.querySelector(".ganre-wrapper");
+        genreWrapper.innerHTML = movie.genre_list.map(genre => 
+          `<a href="${genre.genre_link}">${genre.genre_name}</a>`
+        ).join(', ');
+  
+        // Episode list wrapper
+        const episodeWrapper = document.querySelector(".episode-list");
+        episodeWrapper.innerHTML = movie.episode_list.map(episode => 
+          `<li><a href="${episode.link}">${episode.title}</a> - <time>${episode.uploaded_on}</time></li>`
+        ).join('');
+      })
+      .catch((error) => console.error("Failed to fetch movie data:", error));
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('id');
+  
+    if (!movieId) {
+      console.error("No movie ID found!");
+      return;
+    }
+  
+    fetch("dataanime.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json(); // Parsing JSON
+      })
+      .then((data) => {
+        const movie = data.find(item => item.anime_id === movieId);
+  
+        if (!movie) {
+          console.error("Movie not found!");
+          return;
+        }
+  
+        // Proses movie data seperti yang diinginkan
+        document.querySelector(".movie-detail-banner img").src = movie.thumb;
+        document.querySelector(".movie-detail-banner img").alt = `${movie.title} movie poster`;
+        document.querySelector(".detail-title").innerHTML = movie.title;
+        document.querySelector(".storyline").textContent = movie.synopsis;
+        document.querySelector(".download-btn").href = movie.batch_link.link;
+  
+        // Genre wrapper
+        const genreWrapper = document.querySelector(".genre-wrapper");
+        genreWrapper.innerHTML = movie.genre_list.map(genre => `<a href="${genre.genre_link}">${genre.genre_name}</a>`).join(', ');
+  
+        // Episode list
+        const episodeWrapper = document.querySelector(".episode-wrapper");
+        episodeWrapper.innerHTML = movie.episode_list.map(episode => `<a href="${episode.link}">${episode.title}</a> - Uploaded on ${episode.uploaded_on}`).join('<br>');
+  
+      })
+      .catch((error) => {
+        console.error("Failed to fetch movie data:", error);
+      });
+  });
+  

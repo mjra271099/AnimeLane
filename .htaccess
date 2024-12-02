@@ -1,0 +1,51 @@
+# Aktifkan Rewrite Engine
+RewriteEngine On
+
+# Redirect HTTPS dan tanpa www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://nontonstreamingfilm.my.id/$1 [L,R=301]
+
+# URL Rewriting untuk SEO Friendly
+RewriteRule ^movie/([0-9]+)$ movie-details.html?id=$1 [L,QSA]
+RewriteRule ^movies$ movie.html [L]
+
+
+# Tangani URL tidak valid di bawah movie.html/*
+RewriteRule ^movie\.html/.*$ /404.html [L]
+RewriteRule ^movie/.*$ /404.html [L]
+
+
+# Tangani URL yang tidak ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.html [L]
+# Izinkan akses ke file JSON untuk semua pengguna
+<FilesMatch "\.(json)$">
+  Header set Access-Control-Allow-Origin "*"
+  Require all granted
+</FilesMatch>
+
+# Caching untuk meningkatkan kecepatan
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 day"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/json "access plus 1 week"
+</IfModule>
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+# Sitemap untuk indexing
+# Beritahu search engine lokasi sitemap Anda
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "index, follow"
+</IfModule>
+RewriteRule ^sitemap\.xml$ /path/to/your/sitemap.xml [L]
+
+# Allow bots untuk merayapi JSON dan situs
+Header set Access-Control-Allow-Origin "*"
