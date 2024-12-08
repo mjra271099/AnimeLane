@@ -37,7 +37,7 @@ fetch('json/animeUpdate.json')
 
       groupedAnime[letter].forEach(anime => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="movie-details.html?id=${anime.id}" target="_blank">${anime.title}</a>`;
+        listItem.innerHTML = `<a href="movie-details.html?id=${anime.id}">${anime.title}</a>`;
         animeList.appendChild(listItem);
       });
 

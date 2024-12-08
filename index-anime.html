@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="./assets/css/style-movie.css">
   <!-- <link rel="stylesheet" href="./assets/css/othercss.css"> -->
   <link rel="stylesheet" href="./assets/css/indexanime.css">
+  <link rel="stylesheet" href="./assets/css/preloader.css">
   
 
   <!-- 
@@ -2198,7 +2199,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body id="top">
-
+  <div id="preloader">
+      <div class="loader"></div>
+      <div class="loading-text">Loading...</div>
+    </div>
   <!-- 
     - #HEADER
   -->
@@ -2256,7 +2260,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul class="navbar-list">
 
           <li>
-            <a href="./index.html" class="navbar-link">Home</a>
+            <a href="/" class="navbar-link">Home</a>
           </li>
 
           <li>
@@ -2267,13 +2271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="index-anime.html" class="navbar-link">index anime</a>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Web Series</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">Pricing</a>
-          </li>
+    
 
         </ul>
 
@@ -2362,6 +2360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div id="movie-container"></div>
                 <!-- Daftar film akan dimuat di sini -->
               </div>
+              <script src="./assets/js/preloader.js"></script>
               <script src="./assets/js/indexanime.js"></script>
       </section>
 
@@ -2584,24 +2583,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ul class="footer-list">
 
             <li>
-              <a href="./index.html" class="footer-link">Home</a>
+              <a href="/" class="footer-link">Home</a>
             </li>
 
             <li>
               <a href="movie.html" class="footer-link">Anime</a>
             </li>
 
-            <li>
-              <a href="#" class="footer-link">TV Show</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Web Series</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Pricing</a>
-            </li>
+          
 
           </ul>
 
